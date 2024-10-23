@@ -1,7 +1,7 @@
 let spongebob;
 
 function preload() {
-  spongebob = loadImage("spongebob-150.png");
+  spongebob = loadImage("images/spongebob-150.png");
 }
 
 function setup() {
@@ -10,5 +10,5 @@ function setup() {
 
 function draw() {
   background(220);
-  image(spongebob, mouseX, mouseY);
+  image(spongebob, mouseX, mouseY, 150, 150);
 }
