@@ -29,7 +29,7 @@ function draw() {
     let a = webcam.pixels[offset + 3];
 
     fill(r, g, b, a);
-    rect(randx, randy, resolutionSlider.value());
+    rect(randx, randy, Math.abs(35 - resolutionSlider.value()));
   }
 
   fill("white");
