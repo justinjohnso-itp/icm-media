@@ -12,16 +12,6 @@ function setup() {
 
   refreshSlider = new Slider("Refresh", 200, 10000, 500, 200);
   resolutionSlider = new Slider("Resolution", 10, 30, 15, 250);
-
-  // refreshSlider.create(200);
-  // refreshSlider.position(width - 200, 100);
-  // refreshSlider.size(200);
-  // refreshSlider.style("transform", "rotate(270deg)");
-
-  // resolutionSlider.create(300);
-  // resolutionSlider.position(width - 300, 100);
-  // resolutionSlider.size(200);
-  // resolutionSlider.style("transform", "rotate(270deg)");
 }
 
 function draw() {
