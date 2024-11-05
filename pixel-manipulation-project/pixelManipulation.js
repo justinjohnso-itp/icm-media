@@ -10,8 +10,8 @@ function setup() {
   webcam.loadPixels();
   webcam.hide();
 
-  refreshSlider = new Slider("Refresh", 200, 10000, 500, 200);
-  resolutionSlider = new Slider("Resolution", 10, 30, 15, 250);
+  refreshSlider = new Slider("Framerate", 200, 7500, 500, 175);
+  resolutionSlider = new Slider("Resolution", 10, 30, 15, 275);
 }
 
 function draw() {
@@ -30,20 +30,23 @@ function draw() {
 
     fill(r, g, b, a);
     ellipse(randx, randy, resolutionSlider.value());
-
-    // image(webcam, randx, r, width, height);
-    // console.log(i);
   }
+
+  fill("white");
+  stroke(0, 0, 0);
+  rect(width - 250, 0, 250, 275);
+  noStroke();
+  refreshSlider.drawLabel();
+  resolutionSlider.drawLabel();
 }
 
 function windowResized() {
   resizeCanvas(width, height);
-  webcam.size(width, height);
+  // webcam.size(width, height);
 }
 
 class Slider {
   constructor(label, min, max, def, offset) {
-    // this.label = text(label, width - offset, 200);
     this.label = label;
     this.min = min;
     this.max = max;
@@ -57,5 +60,12 @@ class Slider {
 
   value() {
     return this.slider.value();
+  }
+
+  drawLabel() {
+    fill("black");
+    let label = text(this.label, width - this.offset + 70, 250);
+    label.textSize(15);
+    label.color("black");
   }
 }
