@@ -11,7 +11,7 @@ function setup() {
   webcam.hide();
 
   refreshSlider = new Slider("Framerate", 200, 7500, 500, 175);
-  resolutionSlider = new Slider("Resolution", 10, 30, 15, 275);
+  resolutionSlider = new Slider("Resolution", 5, 30, 15, 275);
 }
 
 function draw() {
@@ -29,7 +29,7 @@ function draw() {
     let a = webcam.pixels[offset + 3];
 
     fill(r, g, b, a);
-    ellipse(randx, randy, resolutionSlider.value());
+    rect(randx, randy, resolutionSlider.value());
   }
 
   fill("white");
