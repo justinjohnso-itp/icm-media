@@ -18,6 +18,7 @@ function draw() {
   noStroke();
   webcam.loadPixels();
 
+  // Rendering the rectangles for the "pixel" effect
   for (let i = 0; i < refreshSlider.value(); i++) {
     let randx = int(random(webcam.width));
     let randy = int(random(webcam.height));
@@ -32,6 +33,7 @@ function draw() {
     rect(randx, randy, Math.abs(35 - resolutionSlider.value()));
   }
 
+  // Rendering the "window" in the corner for the sliders
   fill("white");
   stroke(0, 0, 0);
   rect(width - 250, 0, 250, 275);
