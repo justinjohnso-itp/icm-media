@@ -10,8 +10,15 @@ function draw() {
   // textSize(48);
   // textSize(12 + map(mouseX, 0, width, 0, 144));
   // text("Wheeeeeeee", 50, 200);
+  textAlign(CENTER, CENTER);
+
+  push();
+  translate(mouseX, mouseY);
+  rotate(frameCount * 0.06);
   textSize(72);
-  text("yee haw", mouseX, mouseY);
+  text("yee haw\ndawg", 0, 0);
+  pop();
+
   // fill(200);
   // noStroke();
   // ellipse(50, 300, 15, 15);
