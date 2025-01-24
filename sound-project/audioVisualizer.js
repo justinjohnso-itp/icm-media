@@ -53,7 +53,7 @@ function draw() {
     fill(i, 255, 255);
     stroke(i, 255, 255);
     ellipse(x, y, particleSlider.value(), particleSlider.value() / 2);
-    // ellipse(x, -y, particleSlider.value(), particleSlider.value() / 2);
+    ellipse(x, -y, particleSlider.value(), particleSlider.value() / 2);
     // line(0, 0, x, y);
     // line(0, 0, x, -y);
   }
